@@ -6,4 +6,5 @@ class NewsStory(models.Model):
     author = models.CharField(max_length=200)
     pub_date = models.DateTimeField()
     content = models.TextField()
+    image_url = models.URLField(default ="https://www.britannica.com/story/why-do-cats-sleep-so-much")
     
