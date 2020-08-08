@@ -3,5 +3,16 @@
 
 
 <h1>Profile Page</h1>
+<div id="">
+    <h2>{{ user.username}}</h2>
+    <h4>{{ user.email}}</h4>
+    {{ stories }}
+    {% for story in stories %}
+    <p>{{story.title}}</p>
+    {% endfor %}
+</div>
+
+
+
 
 {% endblock %}
