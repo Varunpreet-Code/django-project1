@@ -5,10 +5,14 @@
 <h1>Profile Page</h1>
 <div id="">
     <h2>{{ user.username}}</h2>
+    <h4>{{ story.pub_date }}</h4>
     <h4>{{ user.email}}</h4>
     
     {% for story in stories %}
-    <p>{{story.title}}</p>
+    <a href="{% url 'news:story' story.pk %}">{{ story.title }}</a>
+    <h4>{{ story.pub_date }}</h4>
+    <h4>{{ user.email}}</h4>
+   
     {% endfor %}
 </div>
 
