@@ -8,5 +8,6 @@
         
     {% else %}
         <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'users:createAccount' %}">Signup</a>
     {% endif %}
 </nav>
