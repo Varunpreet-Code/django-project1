@@ -13,5 +13,3 @@ class NewsStory(models.Model):
     )
     image_url = models.URLField(default ="https://www.britannica.com/story/why-do-cats-sleep-so-much")
     
-    
- 
