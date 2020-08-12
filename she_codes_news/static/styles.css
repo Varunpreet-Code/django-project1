@@ -17,13 +17,15 @@ img {
 
 h1 {
     font-family: 'Montserrat Subrayada', sans-serif;
+    color: chartreuse;
     text-decoration: none;
     font-size: 4rem;
-    margin: 0;
+    margin-left: 30;
 }
 
 h2 {
    font-family: 'Montserrat Subrayada', sans-serif; 
+   color: cornflowerblue;
 }
 
 h3 {
@@ -54,10 +56,17 @@ a, p {
 }
 
 form {
-    border: 2px solid blueviolet;
+    border: 2px solid black;
+}
+form{
+    background-color: cyan;
 }
 
 .form-control {
     background-color: rgb(51, 153, 90);
 
+}
+
+.form-control {
+    background-color: cadetblue;
 }
