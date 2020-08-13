@@ -16,6 +16,10 @@ class UserProfileView(generic.DetailView):
     template_name ='users/Profile.html'
     context_object_name = 'UserDetails'
 
+class AuthorView(generic.DetailView): 
+    model = CustomUser
+    template_name = 'users/author.html'
+    context_object_name = 'author'
 
 
 # def get_context_data(self, **kwargs):
@@ -32,4 +36,5 @@ class UserProfileView(generic.DetailView):
         print(context)
         return context
 
+ 
 # Create your views here.

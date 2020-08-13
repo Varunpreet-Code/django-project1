@@ -35,5 +35,11 @@ class StoryView(generic.DetailView):
     template_name ='news/story.html'
     context_object_name = 'story'
 
+class UpdateStoryView(generic.UpdateView):
+        form_class = StoryForm
+        context_object_name = 'storyForm'
+        template_name = 'news/updateStory.html'
+        success_url = reverse_lazy('news:index')
+
 
     
