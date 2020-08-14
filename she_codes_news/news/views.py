@@ -2,7 +2,7 @@ from django.views import generic
 from django.urls import reverse_lazy
 from .models import NewsStory
 from.forms import StoryForm
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 
 
 class AddStoryView(LoginRequiredMixin,generic.CreateView):
@@ -35,11 +35,27 @@ class StoryView(generic.DetailView):
     template_name ='news/story.html'
     context_object_name = 'story'
 
-class UpdateStoryView(generic.UpdateView):
-        form_class = StoryForm
-        context_object_name = 'storyForm'
-        template_name = 'news/updateStory.html'
-        success_url = reverse_lazy('news:index')
+class DeleteStoryView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    login_url = 'users/login/'
+    model = NewsStory
+    template_name = 'news/deletestory.html'
+    success_url = reverse_lazy('news:index')
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
+
+
+class UpdateStoryView(LoginRequiredMixin, generic.UpdateView):
+    login_url = 'users/login/'
+    model = NewsStory
+    form_class=StoryForm
+    template_name = 'news/updateStory.html'
+
+    def get_success_url(self):
+        pk=self.kwargs['pk']
+        success_url = reverse_lazy('news:story', kwargs={'pk':pk})
+        return success_url
 
 
     

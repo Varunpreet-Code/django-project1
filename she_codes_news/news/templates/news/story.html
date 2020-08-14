@@ -16,6 +16,7 @@
     <div id="story-content">
         <img src="{{ story.image_url }}">
         {{ story.content|linebreaks }}
+        <a href="{% url 'news:deleteStory' story.id %}">Delete Story</a>
     </div>
 </div>
 
