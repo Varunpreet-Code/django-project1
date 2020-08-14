@@ -3,15 +3,22 @@
 
 
 <h1>Profile Page</h1>
-<div id="">
-    <h2>{{ user.username}}</h2>
-    <h4>{{ story.pub_date }}</h4>
-    <h4>{{ user.email}}</h4>
+
+    <div id="">
+        <h2>{{ person.username}}</h2>
+        <h4>{{ person.email}}</h4>
+        
+        {% for story in person.published_stories.all %}
+        <a href="{% url 'news:story' story.pk %}">{{ story.title }}</a>
+        <p>{{story.title}}</p>
+        {% endfor %}
+    </div>
+        
     
-    {% for story in stories %}
+    <!-- {% for story in stories %}
     <a href="{% url 'news:story' story.pk %}">{{ story.title }}</a>
     <h4>{{ story.pub_date }}</h4>
-    <h4>{{ user.email}}</h4>
+    <h4>{{ user.email}}</h4> -->
    
     {% endfor %}
 </div>

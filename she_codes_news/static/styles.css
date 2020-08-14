@@ -33,11 +33,15 @@ h2 {
 h3 {
     font-size: 2rem;
     margin: 0;
+    font-style: oblique;
+    color: coral;
 }
 
 #header-text {
     flex-basis: 80%;
     display: flex;
+    
+
     
 }
 
@@ -50,21 +54,30 @@ nav {
 }
 
 a {
-    margin: 2px;
+    margin: 1px;
     text-decoration: none;
-    color: #000;
+    color:chocolate;
+    font-weight: 250;
+    font-size: 1rem;
+    font-family: 'Montserrat Subrayada', sans-serif; 
+
+
 }
 
-a, p {
+p {
     font-family: monospace;
+    color: black;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: medium;
 }
+
 
 form {
     border: 2px solid black;
 }
-form{
-    background-color: cyan;
-}
+
+
 
 .form-control {
     background-color: rgb(51, 153, 90);
@@ -72,5 +85,38 @@ form{
 }
 
 .form-control {
-    background-color: cadetblue;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin: 25px;
+}
+form{
+    background-color:cornsilk;
+    box-sizing: border-box;
+}
+form{
+    border-radius: 5px;
+    background-color: floralwhite;
+    padding: 15px;
+    margin: 25px;
+}
+
+form username{
+    box-sizing: border-box;
+}
+
+.forms {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin: 25px;
+
+}
+
+.forms button{
+    border-radius: 5px;
+    background-color:greenyellow;
+    padding: 15px;
+    margin: 15px;
+
 }

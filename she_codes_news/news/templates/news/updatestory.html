@@ -7,7 +7,7 @@
 
 {% block content %}
 <div>
-    <h2>Are you sure you want to update this story? {{ story.title }}</h2>
+  {% comment %} <h2>Are you sure you want to update this story? {{ story.title }}</h2> {% endcomment %}
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}

@@ -9,7 +9,8 @@ class NewsStory(models.Model):
     content = models.TextField()
     author = models.ForeignKey(
         get_user_model(),
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='published_stories'
         
     )
     image_url = models.URLField(default ="https://www.britannica.com/story/why-do-cats-sleep-so-much")

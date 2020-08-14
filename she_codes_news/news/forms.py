@@ -17,6 +17,34 @@ class StoryForm(ModelForm):
         
                 }
             ),
+
+            'title': forms.TextInput(  
+                 attrs={
+                     'class':'forms',
+                     'placeholder': 'Text here'
+                 }
+
+            ),
+            'content': forms.TextInput(  
+                 attrs={
+                     'class':'forms',
+                     'placeholder': ''
+                 }
+            ),
+            'author': forms.TextInput(  
+                 attrs={
+                     'class':'forms',
+                     'placeholder': 'Name of author'
+                 }
+            ),
+
+            'button': forms.TextInput(  
+                 attrs={
+                     'class':'forms',
+                     'placeholder': 'Submit'
+                 }
+            )
+            
             # 'title': forms.TextInput(
             #     attrs={
             #         'class':forms,

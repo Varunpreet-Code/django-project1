@@ -14,7 +14,7 @@ class CreateAccountView(CreateView):
 class UserProfileView(generic.DetailView):
     model = CustomUser
     template_name ='users/Profile.html'
-    context_object_name = 'UserDetails'
+    context_object_name = 'person'
 
 class AuthorView(generic.DetailView): 
     model = CustomUser

@@ -49,7 +49,7 @@ class DeleteStoryView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVie
 class UpdateStoryView(LoginRequiredMixin, generic.UpdateView):
     login_url = 'users/login/'
     model = NewsStory
-    form_class=StoryForm
+    fields = "__all__"
     template_name = 'news/updateStory.html'
 
     def get_success_url(self):
